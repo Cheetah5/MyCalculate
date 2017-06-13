@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     var intNumber2: Int = 0
     var strNumber1 = ""
     var strNumber2: String = ""
+    var intAnswer = 0
+    var strAnswer : String = ""
     
-    
-    
-    
+    @IBOutlet weak var answerLabel: UILabel!
     
     @IBOutlet weak var num1TextField: UITextField!
     
@@ -36,8 +36,20 @@ class ViewController: UIViewController {
         //Chang Datatype
         intNumber1 = Int(strNumber1)!
         intNumber2 = Int(strNumber2)!
+        
         print("intNumber1 ==> \(intNumber1)")
         print("intNumber2 ==> \(intNumber2)")
+        
+        //Calculator
+        intAnswer = intNumber1+intNumber2
+        print("intAnswer ==> \(intAnswer)")
+        
+        //Chang int to string
+        strAnswer = String(intAnswer)
+        
+        //Show Answer Lable
+        answerLabel.text = strAnswer
+        
         
     }   // answerButton
     
